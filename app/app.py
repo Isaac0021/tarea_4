@@ -1,8 +1,9 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import os
 
-path_modelo = "modelo.pkl"
+path_modelo = os.path.join(os.path.dirname(__file__), "modelo.pkl")
 modelo = joblib.load(path_modelo)
 
 st.title("Heart Disease Prediction")
@@ -20,7 +21,6 @@ smoke = st.selectbox("¿Fuma?", ["No", "Sí"])
 alco = st.selectbox("¿Toma alcohol?", ["No", "Sí"])
 active = st.selectbox("¿Es activo físicamente?", ["No", "Sí"])
 
-# === Convertir inputs a formato compatible con el modelo ===
 input_dict = {
     "age": age,
     "gender": 0 if gender == "Mujer" else 1,
@@ -35,9 +35,8 @@ input_dict = {
     "active": 0 if active == "No" else 1
 }
 
-input_df = pd.DataFrame([input_dict])  # Convertimos a DataFrame de una fila
+input_df = pd.DataFrame([input_dict])
 
-# === Predicción ===
 if st.button("Predecir"):
     prediction = modelo.predict(input_df)[0]
     st.success("Resultado: {}".format("🛑 Riesgo de enfermedad cardiovascular" if prediction == 1 else "✅ No se detecta riesgo significativo"))
