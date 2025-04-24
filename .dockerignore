@@ -1,0 +1,26 @@
+# Ignorar entorno virtual
+.venv/
+env/
+ENV/
+
+# Ignorar cachés de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos del sistema/macOS
+.DS_Store
+
+# Ignorar configuración de PyCharm
+.idea/
+
+# Ignorar control de versiones
+.git/
+.gitignore
+
+# Ignorar archivos de Jupyter
+.ipynb_checkpoints/
+
+# Ignorar datos temporales o modelos grandes (solo si no los usás)
+# app/modelo.pkl  ← ⚠️ Descomentar si **no** querés incluir el modelo en el contenedor
