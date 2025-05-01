@@ -57,4 +57,7 @@ Glucosa | Normal / Alta / Muy alta | Categórico
 
 ### Salida del modelo 
 
-0 -> No hay 
+La salida del modelo es un número:
+
+- `0`: Sin riesgo aparente de enfermedad cardiovascular
+- `1`: Riesgo presente de enfermedad cardiovascular
