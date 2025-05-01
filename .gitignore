@@ -167,7 +167,6 @@ cython_debug/
 
 # Archivos de datos reales (ya están versionados con DVC)
 data/cardio_train.csv
-app/modelo.pkl
 
 # Archivos DVC que no se deben versionar
 .dvc/cache/
