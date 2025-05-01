@@ -39,13 +39,3 @@ jobs:
         key: ${{ secrets.AZURE_PRIVATE_KEY }}
         source: "app/modelo.pkl"
         target: "/home/azureuser/app/"
-
-    - name: Restart Streamlit
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.AZURE_HOST }}
-        username: ${{ secrets.AZURE_USERNAME }}
-        key: ${{ secrets.AZURE_PRIVATE_KEY }}
-        script: |
-          pkill -f streamlit || true
-          nohup streamlit run app/app.py --server.port 8501 --server.headless true > log.txt 2>&1 &
