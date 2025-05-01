@@ -37,8 +37,8 @@ jobs:
         host: ${{ secrets.AZURE_HOST }}
         username: ${{ secrets.AZURE_USERNAME }}
         key: ${{ secrets.AZURE_PRIVATE_KEY }}
-        source: "model/model.pkl"
-        target: "/Users/isaaccastillo/Documents/Tarea_4/app"
+        source: "app/modelo.pkl"
+        target: "/home/azureuser/app/"
 
     - name: Restart Streamlit (optional)
       uses: appleboy/ssh-action@master
