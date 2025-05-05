@@ -61,3 +61,6 @@ La salida del modelo es un número:
 
 - `0`: Sin riesgo aparente de enfermedad cardiovascular
 - `1`: Riesgo presente de enfermedad cardiovascular
+
+
+### Hola profe, este proyecto lo trabajé yo solo. 
